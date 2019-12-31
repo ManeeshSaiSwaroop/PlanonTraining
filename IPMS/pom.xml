@@ -22,6 +22,22 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+	            <artifactId>maven-surefire-plugin</artifactId>
+	            <version>2.19</version>
+	            <dependencies>
+	                <dependency>
+	                    <groupId>org.junit.platform</groupId>
+	                    <artifactId>junit-platform-surefire-provider</artifactId>
+	                    <version>1.0.0-M4</version>
+	                </dependency>
+	                <dependency>
+	                    <groupId>org.junit.vintage</groupId>
+	                    <artifactId>junit-vintage-engine</artifactId>
+	                    <version>4.12.0-M4</version>
+	                </dependency>
+	            </dependencies>
+	        </plugin>
         </plugins>
     </build>
 
@@ -71,10 +87,51 @@
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-json-jackson</artifactId>
 		</dependency>
-       
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>3.0.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-moxy</artifactId>
+		</dependency>
+		<dependency>
+			    <groupId>org.junit.jupiter</groupId>
+			    <artifactId>junit-jupiter-api</artifactId>
+			    <version>${junit-jupiter.version}</version>
+			    <scope>test</scope>
+			</dependency>
+		    <dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>${junit-jupiter.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+		    	<groupId>org.junit.platform</groupId>
+		    	<artifactId>junit-platform-runner</artifactId>
+		    	<version>${junit.platform.version}</version>
+		    	<scope>test</scope>
+			</dependency>
+			<dependency>
+		        <groupId>junit</groupId>
+		        <artifactId>junit</artifactId>
+		        <version>4.12</version>
+		        <scope>test</scope>
+		    </dependency>
+		    <dependency>
+				<groupId>org.testng</groupId>
+				<artifactId>testng</artifactId>
+				<version>6.14.3</version>
+				<scope>test</scope>
+			</dependency>
+			       
     </dependencies>
     <properties>
         <jersey.version>2.29.1</jersey.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit-jupiter.version>5.5.2</junit-jupiter.version>
+	    <junit.platform.version>1.5.2</junit.platform.version>
     </properties>
 </project>
