@@ -4,7 +4,6 @@ public class Team {
 	private String teamID;
 	private String teamName;
 	private Department department;
-	private int totalNumberOfCompletedProjects;
 	
 	public String getTeamID() {
 		return teamID;
@@ -23,12 +22,6 @@ public class Team {
 	}
 	public void setDepartment(Department department) {
 		this.department = department;
-	}
-	public int getTotalNumberOfCompletedProjects() {
-		return totalNumberOfCompletedProjects;
-	}
-	public void setTotalNumberOfCompletedProjects(int totalNumberOfCompletedProjects) {
-		this.totalNumberOfCompletedProjects = totalNumberOfCompletedProjects;
 	}
 	
 	public Team()
